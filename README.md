@@ -1,4 +1,5 @@
 ## Server
+`apollo-server`
 
 ```bash
 cd server
@@ -7,6 +8,7 @@ yarn dev
 ```
 
 ## Client
+`next-js` + `react-query` + `graphql-request` + `graphql-codegenerator`
 
 ```bash
 cd client
