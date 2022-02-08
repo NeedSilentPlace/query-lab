@@ -1,0 +1,17 @@
+type Book {
+  id: ID!
+  title: String!
+  author: String!
+  description: String!
+  thumbnail: String!
+}
+
+input BooksQueryInput {
+  offset: Int!
+  limit: Int!
+}
+
+extend type Query {
+  books(input: BooksQueryInput): [Book!]!
+  book(id: String!): Book
+}

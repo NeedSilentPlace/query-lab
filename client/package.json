@@ -1,0 +1,35 @@
+{
+  "name": "client",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "codegen": "graphql-codegen --config codegen.yml"
+  },
+  "dependencies": {
+    "@graphql-codegen/near-operation-file-preset": "^2.2.3",
+    "@stitches/react": "^1.2.6",
+    "graphql": "^16.2.0",
+    "graphql-request": "^3.7.0",
+    "next": "12.0.8",
+    "normalize.css": "^8.0.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-icons": "^4.3.1",
+    "react-query": "^3.34.11"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "2.3.1",
+    "@graphql-codegen/introspection": "2.1.1",
+    "@graphql-codegen/typescript": "2.4.2",
+    "@graphql-codegen/typescript-operations": "2.2.2",
+    "@graphql-codegen/typescript-react-query": "^3.3.1",
+    "@types/node": "17.0.10",
+    "@types/react": "17.0.38",
+    "eslint": "8.7.0",
+    "eslint-config-next": "12.0.8",
+    "typescript": "4.5.5"
+  }
+}

@@ -1,0 +1,9 @@
+query Books($input: BooksQueryInput) {
+  books(input: $input) {
+    id
+    title
+    author
+    description
+    thumbnail
+  }
+}

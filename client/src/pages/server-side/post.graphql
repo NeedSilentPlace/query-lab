@@ -1,0 +1,8 @@
+query PostDetail($postId: String!) {
+  post(id: $postId) {
+    id
+    title
+    thumbnail
+    description
+  }
+}

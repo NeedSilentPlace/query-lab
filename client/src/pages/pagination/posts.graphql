@@ -1,0 +1,8 @@
+query Posts($input: PostsQueryInput) {
+  posts(input: $input) {
+    id
+    title
+    thumbnail
+    description
+  }
+}
