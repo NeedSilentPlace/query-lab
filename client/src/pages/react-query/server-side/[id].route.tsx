@@ -59,7 +59,7 @@ const DetailPage: NextPage = () => {
         <Title>{title}</Title>
         <Description>{description}</Description>
         <Button onClick={() => router.push(`/react-query/mutation/${id}`)}>
-          편집
+          EDIT
         </Button>
       </Container>
     </>

@@ -56,7 +56,7 @@ const Detail = () => {
       </ImageWrapper>
       <Title>{title}</Title>
       <Description>{description}</Description>
-      <Button onClick={() => router.push(`/swr/mutation/${id}`)}>편집</Button>
+      <Button onClick={() => router.push(`/swr/mutation/${id}`)}>EDIT</Button>
     </>
   );
 };

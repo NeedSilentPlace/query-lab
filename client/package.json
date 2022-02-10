@@ -7,7 +7,8 @@
     "start": "next start",
     "lint": "next lint",
     "codegen:react-query": "graphql-codegen --config codegen-react-query.yml",
-    "codegen:swr": "graphql-codegen --config codegen-swr.yml"
+    "codegen:swr": "graphql-codegen --config codegen-swr.yml",
+    "codegen": "yarn codegen:react-query && yarn codegen:swr"
   },
   "dependencies": {
     "@graphql-codegen/near-operation-file-preset": "^2.2.3",

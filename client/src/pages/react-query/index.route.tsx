@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 
 const Home: NextPage = () => {
   const router = useRouter();
-  const routes = ["query", "pagination", "mutation"];
+  const routes = ["query", "pagination"];
 
   return (
     <div>
