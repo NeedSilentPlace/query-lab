@@ -2,16 +2,17 @@ import Link from "next/link";
 import { styled } from "@styles";
 import Image from "next/image";
 
-type CardProps = {
+type PostCardProps = {
   id: string;
   title: string;
   description: string;
   thumbnail: string;
+  to: string;
 };
 
-function Card({ id, title, description, thumbnail }: CardProps) {
+function PostCard({ id, title, description, thumbnail, to }: PostCardProps) {
   return (
-    <Link href={`/server-side/${id}`} passHref>
+    <Link href={to} passHref>
       <Block>
         <div className="thumbnail">
           <Image
@@ -54,4 +55,4 @@ const Block = styled("div", {
   },
 });
 
-export default Card;
+export default PostCard;

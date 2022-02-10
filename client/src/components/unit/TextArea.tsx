@@ -1,9 +1,10 @@
 import { styled } from "@styles";
 
-export default styled("input", {
+export default styled("textarea", {
   all: "unset",
-  borderBottom: "1px solid $grey200",
+  border: "1px solid $grey200",
   width: "100%",
+  minHeight: "350px",
   padding: "8px",
   fontSize: "16px",
   color: "$grey500",

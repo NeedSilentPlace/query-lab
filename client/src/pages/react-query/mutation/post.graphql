@@ -1,0 +1,17 @@
+mutation UpdatePost($input: PostUpdateInput!) {
+  updatePost(input: $input) {
+    id
+    title
+    thumbnail
+    description
+  }
+}
+
+query PostDetail($postId: String!) {
+  post(id: $postId) {
+    id
+    title
+    thumbnail
+    description
+  }
+}

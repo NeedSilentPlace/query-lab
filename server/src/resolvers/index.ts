@@ -1,4 +1,4 @@
-import { bookQueries } from "./book"
+import { bookQueries, bookMutations } from "./book"
 import { postQueries, postMutations } from "./post"
 
 const resolvers = {
@@ -8,6 +8,7 @@ const resolvers = {
   },
   Mutation: {
     ...postMutations,
+    ...bookMutations,
   },
 }
 

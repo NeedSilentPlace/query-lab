@@ -11,7 +11,19 @@ input BooksQueryInput {
   limit: Int!
 }
 
+input BookUpdateInput {
+  id: ID!
+  title: String!
+  author: String!
+  description: String!
+  thumbnail: String!
+}
+
 extend type Query {
   books(input: BooksQueryInput): [Book!]!
-  book(id: String!): Book
+  book(id: String!): Book!
+}
+
+extend type Mutation {
+  updateBook(input: BookUpdateInput!): Book!
 }

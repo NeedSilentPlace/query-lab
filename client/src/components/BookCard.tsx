@@ -2,7 +2,7 @@ import Link from "next/link";
 import { styled } from "@styles";
 import Image from "next/image";
 
-type CardProps = {
+type BookCardProps = {
   id: string;
   title: string;
   description: string;
@@ -10,7 +10,13 @@ type CardProps = {
   author: string;
 };
 
-function Card({ id, title, description, thumbnail, author }: CardProps) {
+function BookCard({
+  id,
+  title,
+  description,
+  thumbnail,
+  author,
+}: BookCardProps) {
   return (
     <Block>
       <Image
@@ -59,4 +65,4 @@ const Block = styled("div", {
   },
 });
 
-export default Card;
+export default BookCard;

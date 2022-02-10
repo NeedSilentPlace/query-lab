@@ -1,19 +1,14 @@
 import type { NextPage } from "next";
-import Head from "next/head";
 import { Button, Header, Container } from "@unit";
 import { useRouter } from "next/router";
 
 const Home: NextPage = () => {
   const router = useRouter();
-  const routes = ["react-query", "swr"];
+  const routes = ["query"];
 
   return (
     <div>
-      <Head>
-        <title>Query.Lab</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <Header title="Query Lab" />
+      <Header title="SWR" back />
       <main>
         <Container>
           {routes.map((route) => (
@@ -21,7 +16,7 @@ const Home: NextPage = () => {
               outline
               css={{ marginTop: "16px" }}
               key={route}
-              onClick={() => router.push(`/${route}`)}
+              onClick={() => router.push(`/swr/${route}`)}
             >
               {route}
             </Button>

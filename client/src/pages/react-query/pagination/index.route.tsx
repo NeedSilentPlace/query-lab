@@ -1,11 +1,11 @@
 import type { NextPage } from "next";
 import { Container, Header, Button } from "@unit";
-import client from "../../lib/client";
+import client from "@client";
 import {
   usePostsQuery,
   useInfinitePostsQuery,
 } from "./__generated__/posts.generated";
-import Card from "./components/Card";
+import PostCard from "@components/PostCard";
 
 const Pagination: NextPage = () => {
   const { data, fetchNextPage, isLoading } = useInfinitePostsQuery(
@@ -31,7 +31,11 @@ const Pagination: NextPage = () => {
       <Header title="Pagination" back />
       <Container>
         {posts?.map((post) => (
-          <Card key={post.id} {...post} />
+          <PostCard
+            key={post.id}
+            to={`/react-query/server-side/${post.id}`}
+            {...post}
+          />
         ))}
         <Button css={{ marginTop: "16px" }} onClick={() => fetchNextPage()}>
           more

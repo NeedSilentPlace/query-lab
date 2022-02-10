@@ -1,5 +1,5 @@
 import type { NextPage, GetServerSideProps } from "next";
-import { Container, Header } from "@unit";
+import { Container, Header, Button } from "@unit";
 import { dehydrate, QueryClient, useQueryClient } from "react-query";
 import { styled } from "@styles";
 import client from "@client";
@@ -41,12 +41,12 @@ const DetailPage: NextPage = () => {
 
   if (!data?.post) return null;
 
-  const { title, thumbnail, description } = data.post;
+  const { id, title, thumbnail, description } = data.post;
 
   return (
     <>
       <Header title="Detail Page" back />
-      <Container width={1024}>
+      <Container>
         <ImageWrapper>
           <Image
             src={thumbnail}
@@ -58,6 +58,9 @@ const DetailPage: NextPage = () => {
         </ImageWrapper>
         <Title>{title}</Title>
         <Description>{description}</Description>
+        <Button onClick={() => router.push(`/react-query/mutation/${id}`)}>
+          편집
+        </Button>
       </Container>
     </>
   );

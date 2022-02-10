@@ -1,0 +1,19 @@
+query Books($input: BooksQueryInput) {
+  books(input: $input) {
+    id
+    title
+    author
+    description
+    thumbnail
+  }
+}
+
+query Book($bookId: String!) {
+  book(id: $bookId) {
+    id
+    title
+    author
+    description
+    thumbnail
+  }
+}

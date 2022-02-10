@@ -21,6 +21,14 @@ export type Book = {
   title: Scalars['String'];
 };
 
+export type BookUpdateInput = {
+  author: Scalars['String'];
+  description: Scalars['String'];
+  id: Scalars['ID'];
+  thumbnail: Scalars['String'];
+  title: Scalars['String'];
+};
+
 export type BooksQueryInput = {
   limit: Scalars['Int'];
   offset: Scalars['Int'];
@@ -29,7 +37,13 @@ export type BooksQueryInput = {
 export type Mutation = {
   __typename?: 'Mutation';
   _empty?: Maybe<Scalars['String']>;
+  updateBook: Book;
   updatePost: Post;
+};
+
+
+export type MutationUpdateBookArgs = {
+  input: BookUpdateInput;
 };
 
 
@@ -60,9 +74,15 @@ export type PostsQueryInput = {
 export type Query = {
   __typename?: 'Query';
   _empty?: Maybe<Scalars['String']>;
+  book: Book;
   books: Array<Book>;
   post?: Maybe<Post>;
   posts: Array<Post>;
+};
+
+
+export type QueryBookArgs = {
+  id: Scalars['String'];
 };
 
 
